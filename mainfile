@@ -1,1 +1,32 @@
+#include <iostream>
+using namespace std;
 
+// this function asks the user two values
+// and stores the larger value
+// in a seperate variable, and prints to terminal
+
+int main() {
+    int firstVal;
+    int secondVal;
+    int largerVal;
+
+    cout << "Enter an integer value --> ";
+    cin >> firstVal;
+
+    cout << "Enter another integer value --> ";
+    cin >> secondVal;
+
+    if (firstVal > secondVal) {
+        largerVal = firstVal;
+    }
+    else if (secondVal > firstVal) {
+        largerVal = secondVal;
+    }
+    else {
+        cout << "Enter two different integers." << endl;
+    }
+
+    cout << "\nThe larger value between your integers is " << largerVal;
+
+    return 0;
+}
