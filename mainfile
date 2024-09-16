@@ -8,7 +8,6 @@ using namespace std;
 int main() {
     int firstVal;
     int secondVal;
-    int largerVal;
 
     cout << "Enter an integer value --> ";
     cin >> firstVal;
@@ -16,17 +15,16 @@ int main() {
     cout << "Enter another integer value --> ";
     cin >> secondVal;
 
-    if (firstVal > secondVal) {
-        largerVal = firstVal;
-    }
-    else if (secondVal > firstVal) {
-        largerVal = secondVal;
-    }
-    else {
+// giving largerVal the larger value between first and second val
+    int largerVal = (firstVal != secondVal) ? (firstVal > secondVal ? firstVal : secondVal) : -1;
+
+
+    if (largerVal == -1) {
         cout << "Enter two different integers." << endl;
     }
-
-    cout << "\nThe larger value between your integers is " << largerVal;
+    else {
+        cout << "\nThe larger value between your integers is " << largerVal;
+    }
 
     return 0;
 }
